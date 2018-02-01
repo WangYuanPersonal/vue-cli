@@ -4,9 +4,11 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import qs from "qs";
+import http from "./assets/js/http";
+import store from "./store";
+
 import "./assets/css/reset.css";
 import "./assets/css/common.css";
-import http from "./assets/js/http";
 
 Vue.config.productionTip = false;
 Vue.prototype.qs = qs;
@@ -16,6 +18,7 @@ Vue.prototype.$http = http;
 new Vue({
   el: "#app",
   router,
+  store,
   components: { App },
   template: "<App/>"
 });

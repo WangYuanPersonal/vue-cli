@@ -1,24 +1,22 @@
 <template>
-  <div>
-    <button @click="de">1111111111111</button>
-  </div>
+    <div>
+        <div>
+            {{count}}
+        </div>
+        <button @click="minus">-</button>
+        <button @click="add">+</button>
+    </div>
 </template>
 
 <script>
+import { mapActions, mapGetters, mapState } from "vuex";
 export default {
   name: "HelloWorld",
   data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
+    return {};
   },
-  methods: {
-    de() {
-      this.$router.push({
-        name: "Login"
-      });
-    }
-  }
+  methods: mapActions("b", ["minus", "add"]),
+  computed: mapState("b", ["count"])
 };
 </script>
 
