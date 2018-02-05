@@ -1,7 +1,13 @@
 import Vue from "vue";
 import Router from "vue-router";
-import HelloWorld from "@/components/HelloWorld";
+// import HelloWorld from "@/components/HelloWorld";
 import Part from "@/router/function1/part";
+
+// 懒加载组件
+const HelloWorld = r =>
+  require.ensure([], () => r(require("../components/HelloWorld")));
+// const Part = r =>
+//   require.ensure([], () => r(require("../router/function1/")));
 
 Vue.use(Router);
 

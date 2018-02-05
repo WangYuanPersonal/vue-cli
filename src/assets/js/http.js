@@ -29,7 +29,7 @@ axios.interceptors.response.use(
     // 响应成功关闭loading
     // loadinginstace.close();、
     // 错误码
-    switch (response.data.code) {
+    switch (res.data.code) {
       case 1: {
         console.log(res);
         break;
